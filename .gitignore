@@ -21,7 +21,14 @@
 /storage/*
 !/storage/.keep
 
+# Byebug
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+/coverage/*
+
+# Editors
+.idea/*
+.vscode/settings.json 
