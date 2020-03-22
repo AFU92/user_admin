@@ -13,7 +13,8 @@ In order to run this application you must have installed [Docker](https://www.do
 Then you must run the following commands:
 
 ```shell
-docker-compose up
+docker-compose build
+docker-compose up -d
 docker-compose run web rake db:create
 docker-compose run web rake db:migrate
 ```
@@ -22,7 +23,6 @@ docker-compose run web rake db:migrate
 
 In order to run this app in development environment you must install:
 * [Ruby](https://www.ruby-lang.org/en/downloads/)
-* [Rails](https://guides.rubyonrails.org/v5.0/getting_started.html#installing-rails)
 * [PostgreSQL](https://www.postgresql.org/download/)
 
 An then, you must configure the file `./config/database.yml` with the postgresql user and run the following commands:

@@ -21,4 +21,4 @@ docker_test:
   <<: *default
   host: db
   database: admin_user_docker
-  password:
+  password: test1234
