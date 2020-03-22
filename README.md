@@ -1,24 +1,38 @@
-# README
+# USER ADMIN
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application covers the CRUD operation for User module and the preferences associated. All the EndPoints are following Restful API standard:
+You can find insomnia folder with all the request examples in `./documentation/Insomnia_UserAdmin.json`
 
-Things you may want to cover:
+This app has a test coverage of `99.37%`
 
-* Ruby version
+## How To Run
 
-* System dependencies
+### Docker ready to run
 
-* Configuration
+In order to run this application you must have installed [Docker](https://www.docker.com/products/docker-desktop) and [Docker-compose](https://docs.docker.com/compose/install/)
+Then you must run the following commands:
 
-* Database creation
+```shell
+docker-compose up
+docker-compose run web rake db:create
+docker-compose run web rake db:migrate
+```
 
-* Database initialization
+### Run in development environment
 
-* How to run the test suite
+In order to run this app in development environment you must install:
+* [Ruby](https://www.ruby-lang.org/en/downloads/)
+* [Rails](https://guides.rubyonrails.org/v5.0/getting_started.html#installing-rails)
+* [PostgreSQL](https://www.postgresql.org/download/)
 
-* Services (job queues, cache servers, search engines, etc.)
+An then, you must configure the file `./config/database.yml` with the postgresql user and run the following commands:
 
-* Deployment instructions
+```shell
+bundle install
+rake db:create
+rake db:migrate
+rails server
+```
 
-* ...
+## Author
+Andrea Fuentes
